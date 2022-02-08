@@ -140,7 +140,7 @@ db.once('open', () => {
         }
     })
 
-    const port = process.env.PORT || 4000;
+    const port = process.env.PORT || 5001;
     server.listen(port, () => {
         console.log(`Server is up on port ${port}.`)
     })

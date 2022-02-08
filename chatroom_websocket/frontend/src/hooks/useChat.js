@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import bcrypt from 'bcryptjs';
 
-const client = new WebSocket('ws://localhost:4000');
+const client = new WebSocket('ws://localhost:5001');
 
 const saltRounds = 10;
 
