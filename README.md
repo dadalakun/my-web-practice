@@ -1,2 +1,2 @@
-There are three sub-projects in this repo. Each project implents a simple full stack web-service which uses different frontend/backend technologies.
+There are three sub-projects in this repo. Each project represents a simple full stack web application which uses different frontend/backend technologies.
 For more informations. Please check the README file in each folder.  

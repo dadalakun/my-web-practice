@@ -1,8 +1,32 @@
-![](https://i.imgur.com/lkqB9tF.png)
+## ScoreCard
+<img src="https://i.imgur.com/lkqB9tF.png" width="550" >
 
-#### 1. 將 clear 按鈕分成 1. 清除 database 2. 清空 Console。
-#### 2. 面板左下為 Console，負責印出對 ScoreCard DB 操作時的資訊。
-#### 3. 右下為 Table，依據本次作業進階要求對 ADD 和 Query 操作做出反應。
-#### 4. Table 有東西時，點擊 Column Name 可對該項資料做排序。
-#### 5. 於 Query 區域新增 All 選項，選擇 All 並送出搜尋即可爬回資料庫中所有分數卡。
-#### 6. 如果在 table 中有搜尋結果時按下 Clear DB，table 中的資料不會因此消失，需要等到下次 Add 或是 Query 時才會刷新，這部分算是比較遺憾的地方 (做作業時沒有考慮到這個層面，要改的話除非大改，不然架構和 State 的邏輯應該會變雜亂)。
+### 簡介
+本應用是「網路服務程式設計」課程的作業七。這個作業中，我使用 React/Axios/Express/Mongoose 框架，去寫出一個簡單的成績登錄系統，此系統有以下功能：
+1. ADD 頁面新增成績紀錄（名字, 科目, 成績）
+2. QUERY 頁面選擇以名字、科目名稱進行搜尋，抑或是點選 All 查詢資料庫中所有成績資料
+3. 左下角是這個系統的 console 頁面，顯示在新增、查詢資料時產生的附屬資料/紀錄
+4. 右下角是查詢的結果，在每次 QUERY/ADD 時刷新，並可點選表格上方欄位名稱對資料進行排序
+5. 右上角兩個按鈕分別可以清空資料庫和清空 console block
+
+### Set Up
+Install the necessary dependencies
+``` bash
+# in frontend
+$ yarn install
+# in backend
+$ yarn install
+```
+Set env variable for database connection
+``` bash
+# in backend
+$ mkdir .env
+$ echo "MONGO_URL = '${MongoDB link}'" > .env
+```
+Start the application
+``` bash
+# run frontend on one terminal
+$ yarn start
+# run backend on another terminal
+$ yarn server
+```

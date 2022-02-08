@@ -1,4 +1,6 @@
-# Wp1101 Hw8 - Chat Box
+## ChatRoom - websocket version
+(hw8 of wp1101)
+
 ### 登入與註冊
 1. 啟動服務後會看到登入頁面 
 

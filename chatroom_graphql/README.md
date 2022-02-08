@@ -1,4 +1,5 @@
-## wp1101 hw9
+## ChatRoom - graphql version
+(hw9 of wp1101)
 
 單人聊天室的 Graphql 版本，另外加入進階要求的 "未讀訊息數量標示" 功能。
 
