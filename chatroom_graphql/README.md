@@ -1,43 +1,28 @@
 ## ChatRoom - graphql version
-(hw9 of wp1101)
+### 簡介
 
-單人聊天室的 Graphql 版本，另外加入進階要求的 "未讀訊息數量標示" 功能。
+在 WebSocket 版本中原是使用 listen and broadcast 去實現即時通訊的功能，而在此 GraphQL 版本中則是透過 Subscription - 當特定資訊有所更動時，GraphQL Server 會去自動通知有訂閱該資訊的所有 Client 端，以實現即時聊天的效果。除此 WebSocket 版本有的基本功能之外，這個 Project 也加入 "未讀訊息數量標示" 的功能。
 
-- 按下 Clear 按鈕會清空**當前**聊天室的聊天紀錄，此變化也會透過 Subscription 及時反映到聊天對象的 Client 端(如果他有開啟聊天室的話)。
-- 使用者皆須在登入頁面點選 Register 並註冊過後才能使用，聊天的對象也僅限有註冊過的用戶。
-- 許多程式碼是參考老師上課開過的 & 投影片的 Code。
+<img src="https://i.imgur.com/lRrrXg5.png" width="700">
 
-### 使用方法
-安裝套件
+### Set Up
+Install the necessary dependencies
 ``` bash
-> cd frontend
-> yarn install
-> cd ../backend
-> yarn install
+# in frontend
+$ yarn install
+# in backend
+$ yarn install
 ```
-新增資料庫 config file: `.env`，填入 mogoose database 連結
+Set env variable for database connection
 ``` bash
-> cd backend
-> mkdir .env
+# in backend
+$ mkdir .env
+$ echo "MONGO_URL = '${MongoDB link}'" > .env
 ```
-``` vim=
-// .env
-MONGO_URL = '${your database link}'
-```
-開啟後端，結果如下圖
+Start the application
 ``` bash
-> pwd
-.../hw9
-
-> yarn server
+# run frontend on one terminal
+$ yarn start
+# run backend on another terminal
+$ yarn server
 ```
-<img src="https://i.imgur.com/HPLe7vg.png" width="400">
-
-###
-
-另一個 terminal 開啟前端
-``` bash
-> yarn start
-```
-
-<img src="https://i.imgur.com/oosItXY.png" width="400">
